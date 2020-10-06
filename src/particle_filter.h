@@ -13,6 +13,8 @@
 #include <vector>
 #include "helper_functions.h"
 
+using namespace std;
+
 struct Particle {
   int id;
   double x;
@@ -26,15 +28,6 @@ struct Particle {
 
 
 class ParticleFilter {
-
-  // Flag to check if filter is initialized
-  // bool is_initialized;
-
-  // Number of particles to draw
-	// int num_particles;
-
-  // Generate random number
-  std::default_random_engine gen;
 
  public:
   // Constructor

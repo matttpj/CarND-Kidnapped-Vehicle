@@ -20,8 +20,12 @@
 
 using std::string;
 using std::vector;
+using namespace std;
 
-#define EPS 0.00001  // EPS is Electric Power Steering
+#define EPS 0.00001  // EPS is Electric Power Steering error value
+
+// declare a random engine to be used across multiple and various method calls
+static default_random_engine gen;
 
 void ParticleFilter::init(double x, double y, double theta, double std[]) {
   /**
@@ -247,6 +251,7 @@ void ParticleFilter::resample() {
    * NOTE: You may find std::discrete_distribution helpful here.
    *   http://en.cppreference.com/w/cpp/numeric/random/discrete_distribution
    */
+
   // Get weights and max weight
   vector<double> weights;
   double maxWeight = numeric_limits<double>::min();
